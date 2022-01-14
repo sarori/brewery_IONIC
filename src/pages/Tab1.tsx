@@ -9,6 +9,8 @@ import {
 } from "@ionic/react"
 import ExploreContainer from "../components/ExploreContainer"
 import "./Tab2.css"
+import axios from "axios"
+import React, { useEffect, useState } from "react"
 
 const slideOpts = {
 	initialSlide: 1,
@@ -17,6 +19,25 @@ const slideOpts = {
 }
 
 const Tab1: React.FC = () => {
+	const [loading, setLoading] = useState(true)
+	const [data, setData] = useState([])
+
+	useEffect(() => {
+		const fetchData = async () => {
+			setLoading(true)
+			try {
+				const { data: response } = await axios.get("https://api.punkapi.com/v2/beers")
+				setData(response)
+			} catch (error) {
+				console.log(error)
+			}
+			setLoading(false)
+		}
+
+		fetchData()
+	}, [])
+	console.log(data)
+
 	return (
 		<IonPage>
 			<IonHeader>
