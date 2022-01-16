@@ -76,7 +76,7 @@ const Tab2: React.FC = () => {
 							Employers, and breaking into international markets like a shark on
 							steroids. One thing, however, has always stayed the same. Nailed to the
 							wall, written in blood, our mission is to make other people as
-							passionate about great craft beer as we are.{" "}
+							passionate about great craft beer as we are.
 						</Desc>
 					</Content>
 				</Container>
