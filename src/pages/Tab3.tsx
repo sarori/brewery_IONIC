@@ -73,6 +73,10 @@ const Tab3: React.FC = () => {
 		fetchData()
 	}, [])
 
+	if (loading) {
+		return <div>Loading...</div>
+	}
+
 	return (
 		<IonPage>
 			<IonHeader>
