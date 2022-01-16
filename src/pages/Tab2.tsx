@@ -1,5 +1,4 @@
 import { IonContent, IonHeader, IonPage, IonTitle, IonToolbar } from "@ionic/react"
-import ExploreContainer from "../components/ExploreContainer"
 import "./Tab2.css"
 import styled from "styled-components"
 
@@ -8,18 +7,30 @@ const Container = styled.div`
 	align-items: center;
 	justify-content: center;
 	flex-direction: column;
+	/* background-image: url("https://www.shetnews.co.uk/wp-content/uploads/2015/11/Large_brewdog-logo.gif");
+	object-fit: cover; */
 `
 
 const Title = styled.div`
 	font-size: 48px;
 	font-weight: 500;
-	letter-spacing: 2.5px;
-	margin: 20px 0;
+	letter-spacing: 2.8px;
+	padding: 20px 0 10px 0;
 `
 
 const Content = styled.div`
+	padding: 0 25px;
+`
+const SubTitle = styled.div`
 	font-size: 20px;
-	margin: 20px 0;
+	letter-spacing: 0.6px;
+	font-weight: 500;
+`
+
+const Desc = styled.div`
+	font-size: 16px;
+	padding-top: 20px;
+	letter-spacing: 0.2px;
 `
 
 const Tab2: React.FC = () => {
@@ -48,13 +59,13 @@ const Tab2: React.FC = () => {
 				<Container>
 					<Title>Our mission</Title>
 					<Content>
-						<div>
+						<SubTitle>
 							{" "}
 							BrewDog was born with the aim to revolutionize the beer industry and
 							completely redefine beer-drinking culture. We’re determined to make a
 							stand for independence, a stand for quality and stand for craft.
-						</div>
-						<div>
+						</SubTitle>
+						<Desc>
 							OUR MISSION BREWDOG WAS BORN WITH THE AIM TO REVOLUTIONISE THE BEER
 							INDUSTRY AND COMPLETELY REDEFINE BRITISH BEER-DRINKING CULTURE. A decade
 							of dog, 1000 employees, and two breweries later, we are the fastest
@@ -63,26 +74,10 @@ const Tab2: React.FC = () => {
 							steroids. One thing, however, has always stayed the same. Nailed to the
 							wall, written in blood, our mission is to make other people as
 							passionate about great craft beer as we are.{" "}
-						</div>
+						</Desc>
 					</Content>
 				</Container>
-				{/* <IonHeader collapse="condense">
-					<IonToolbar>
-						<IonTitle size="large">Tab 2</IonTitle>
-					</IonToolbar>
-				</IonHeader>
-				<ExploreContainer name="Tab 2 page" /> */}
 			</IonContent>
-			{/* BrewDog was born with the aim to revolutionize the beer industry and completely redefine
-			beer-drinking culture. We’re determined to make a stand for independence, a stand for
-			quality and stand for craft. */}
-			{/* OUR MISSION BREWDOG WAS BORN WITH THE AIM TO REVOLUTIONISE THE BEER INDUSTRY AND
-			COMPLETELY REDEFINE BRITISH BEER-DRINKING CULTURE. A decade of dog, 1000 employees, and
-			two breweries later, we are the fastest growing Food & Drinks company in the UK, one of
-			the Times Top 100 Best Employers, and breaking into international markets like a shark
-			on steroids. One thing, however, has always stayed the same. Nailed to the wall, written
-			in blood, our mission is to make other people as passionate about great craft beer as we
-			are. */}
 		</IonPage>
 	)
 }

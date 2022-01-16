@@ -1,4 +1,4 @@
-import { Redirect, Route } from "react-router-dom"
+import { Redirect, Route, Switch } from "react-router-dom"
 import {
 	IonApp,
 	IonIcon,
@@ -33,6 +33,7 @@ import "@ionic/react/css/display.css"
 
 /* Theme variables */
 import "./theme/variables.css"
+import Detail from "./components/Detail"
 
 setupIonicReact()
 const App: React.FC = () => (
@@ -40,18 +41,23 @@ const App: React.FC = () => (
 		<IonReactRouter>
 			<IonTabs>
 				<IonRouterOutlet>
-					<Route exact path="/tab1">
-						<Tab1 />
-					</Route>
-					<Route exact path="/tab2">
-						<Tab2 />
-					</Route>
-					<Route path="/tab3">
-						<Tab3 />
-					</Route>
-					<Route exact path="/">
-						<Redirect to="/tab1" />
-					</Route>
+					<Switch>
+						<Route exact path="/tab1">
+							<Tab1 />
+						</Route>
+						<Route exact path="/tab2">
+							<Tab2 />
+						</Route>
+						<Route path="/tab3/:id" component={Detail} />
+
+						<Route exact path="/tab3">
+							<Tab3 />
+						</Route>
+
+						<Route exact path="/">
+							<Redirect to="/tab1" />
+						</Route>
+					</Switch>
 				</IonRouterOutlet>
 				<IonTabBar slot="bottom">
 					<IonTabButton tab="tab1" href="/tab1">
