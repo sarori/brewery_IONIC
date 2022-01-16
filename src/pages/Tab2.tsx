@@ -62,7 +62,6 @@ const Tab2: React.FC = () => {
 						<SubTitle>
 							BrewDog was born with the aim to revolutionize the beer industry and
 							completely redefine beer-drinking culture. We’re determined to make a
-							stand for independence, a stand for quality and stand for craft.
 						</SubTitle>
 						<Desc>
 							OUR MISSION BREWDOG WAS BORN WITH THE AIM TO REVOLUTIONISE THE BEER
